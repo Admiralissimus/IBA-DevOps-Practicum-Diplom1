@@ -25,8 +25,9 @@ locals {
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
 
   tags = {
-    owner      = var.owner
-    GithubRepo = "terraform-aws-eks"
-    GithubOrg  = "terraform-aws-modules"
+    owner       = var.owner
+    environment = "dev"
+    GithubRepo  = "terraform-aws-eks"
+    GithubOrg   = "terraform-aws-modules"
   }
 }
