@@ -28,5 +28,5 @@ jobs:
         run: terraform validate -no-color
 
       - name: Apply or destroy infrastructure
-        run: test -f "./destroy_it" && terraform apply -auto-approve || terraform apply -auto-approve
+        run: test -f "./destroy_it" && terraform destroy -auto-approve || terraform apply -auto-approve
  
