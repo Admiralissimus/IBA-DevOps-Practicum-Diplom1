@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "container-registry" {
-  name                 = "${var.owner}-diplom"
+  name                 = "${var.owner}-diplom1"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
