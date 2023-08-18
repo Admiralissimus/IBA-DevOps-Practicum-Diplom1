@@ -20,3 +20,13 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = module.eks.cluster_name
 }
+
+output "ecr_id" {
+  description = "Repository ID"
+  value       = aws_ecr_repository.container-registry.registry_id
+}
+
+output "ecr_url" {
+  description = "Repository URL"
+  value       = aws_ecr_repository.container-registry.repository_url
+}

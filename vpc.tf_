@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.1"
 
-  name = "ushakou-k8s-vpc"
+  name = "${var.owner}-k8s-vpc"
   cidr = var.vpc_cidr
 
   azs             = local.azs

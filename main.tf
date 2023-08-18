@@ -11,17 +11,17 @@ terraform {
   }
 }
 
-resource "null_resource" "update_kubeconfig" {
-  depends_on = [module.eks]
-  provisioner "local-exec" {
-    command = "aws eks --region ${var.region} update-kubeconfig --name ${var.cluster_name}"
-  }
-}
+# For local using
+# resource "null_resource" "update_kubeconfig" {
+#   depends_on = [module.eks]
+#   provisioner "local-exec" {
+#     command = "aws eks --region ${var.region} update-kubeconfig --name ${var.cluster_name}"
+#   }
+# }
 
 data "aws_availability_zones" "available" {}
 
 locals {
-  #name   = "ushakou-k8s"
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
 
   tags = {
