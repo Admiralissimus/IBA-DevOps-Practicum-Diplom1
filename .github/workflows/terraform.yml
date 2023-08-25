@@ -27,6 +27,11 @@ jobs:
       - name: Terraform Validate
         run: terraform validate -no-color
 
-      - name: Apply or destroy infrastructure
-        run: test -f "./destroy_it" && terraform destroy -auto-approve || terraform apply -auto-approve
+      - name: Terraform Destroy
+        if: contains(github.event.head_commit.message, 'terraform destroy')
+        run: terraform destroy -auto-approve
+
+      - name: Terraform Apply
+        if: ${{ !contains(github.event.head_commit.message, 'terraform destroy') }}
+        run: terraform apply -auto-approve  
  
