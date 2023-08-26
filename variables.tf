@@ -16,6 +16,12 @@ variable "cluster_name" {
   default     = "Ushakou-tf-eks"
 }
 
+variable "node_group_one_type" {
+  description = "Type of nodes in group one"
+  type        = string
+  default     = "t3.medium"
+}
+
 variable "vpc_cidr" {
   description = "CIDR of VPC"
   type        = string

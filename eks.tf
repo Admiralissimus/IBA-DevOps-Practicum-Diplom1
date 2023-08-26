@@ -17,7 +17,7 @@ module "eks" {
     node_group_one = {
       name = "ushakou-eks-node"
 
-      instance_types = ["t2.micro"]
+      instance_types = [var.node_group_one_type]
 
       min_size     = 2
       max_size     = 2
