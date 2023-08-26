@@ -15,7 +15,7 @@ module "eks" {
 
   eks_managed_node_groups = {
     node_group_one = {
-      name = "node-group"
+      name = "ushakou-eks-node"
 
       instance_types = ["t2.micro"]
 
