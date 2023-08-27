@@ -19,7 +19,7 @@ variable "cluster_name" {
 variable "node_group_one_type" {
   description = "Type of nodes in group one"
   type        = string
-  default     = "t3.medium"
+  default     = "t2.micro"
 }
 
 variable "vpc_cidr" {
