@@ -1,4 +1,4 @@
-variable "region" {
+iumvariable "region" {
   description = "Region"
   type        = string
   default     = "us-east-1"
@@ -19,7 +19,7 @@ variable "cluster_name" {
 variable "node_group_one_type" {
   description = "Type of nodes in group one"
   type        = string
-  default     = "t3.large"
+  default     = "t3.medium"
 }
 
 variable "vpc_cidr" {
